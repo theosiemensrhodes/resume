@@ -1,0 +1,228 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{fontspec}
+\setmainfont{Tinos}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    pdfborder={0 0 1},
+    pdftitle={Theo Siemens-Rhodes Resume},
+    pdfauthor={Theo Siemens-Rhodes},
+    pdfsubject={Software Engineering Resume},
+    pdfkeywords={Software Engineering, Backend, Distributed Systems, Full-Stack, DevOps, Golang, AWS, UBC},
+    pdfproducer={LaTeX},
+    pdfcreator={XeLaTeX}
+}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\bfseries\large\raggedright
+}{}{0em}{\MakeUppercase}[\color{black}\titlerule \vspace{-2pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\[-1pt]
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-4pt}\item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \small#2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 $|$ \textit{\small#2} & \small#3 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \MakeUppercase{\textbf{\Huge \scshape Theo Siemens-Rhodes}} \\ \vspace{5pt}
+    \small +1 (778) 325-8153 | \href{mailto:theo.siemensrhodes@gmail.com}{theo.siemensrhodes@gmail.com} | 
+    \href{https://linkedin.com/in/theo-siemens-rhodes}{linkedin.com/in/theo-siemens-rhodes} |
+    \href{https://github.com/theosiemensrhodes}{github.com/theosiemensrhodes}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading{The University of British Columbia}{Expected Graduation 2026}{BASc in Computer Engineering}{Vancouver BC, Canada}
+  \resumeItemListStart
+      \resumeItem{GPA: 3.8/4.0, Dean's List 2021-22, 2022-23, 2023-24, 2024-25}
+      \resumeItem{Relevant Coursework: Distributed Software Application: A+, Introduction to Cybersecurity: A+, Operating Systems: A, Machine Learning with Engineering Applications: A+, Digital Systems Design: A+, Computer Architecture: A}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading{SAP}{Jan 2026 -- Current}{Software Engineering Intern}{Vancouver BC, CA}
+  \resumeItemListStart
+    \resumeItem{}
+  \resumeItemListEnd
+
+  \resumeSubheading{Hertzler Systems}{May 2023 -- Dec 2025}{Software Engineering Intern (Summers 2023, 2024, 2025, Fall 2025)}{Goshen IN, US}
+  \resumeItemListStart
+    \resumeItem{Accelerated bulk CSV imports by over \textbf{500x} by offloading parsing to \textbf{C\# .NET} backend task queue using MassTransit, removing per-row network bottlenecks and enabling fault-tolerant ingestion with support for partial retries.}
+    \resumeItem{Implemented new \textbf{AngularJS} features, including audit dashboards and user license tracking; while also expanding support for user-defined scripting hooks, enabling greater customization and improving usability.}
+    \resumeItem{Automated cross-platform installer builds for the companion local app by authoring an \textbf{Azure DevOps pipeline} to package platform-specific installers and publish artifacts to \textbf{Azure Blob Storage}, reducing manual deployment overhead.}
+    \resumeItem{Optimized complex reporting queries in \textbf{PostgreSQL} by designing targeted indexes and partitioning large tables, reducing execution time to \textbf{~300ms on datasets exceeding 1M rows}, which enabled real-time analytics and improved user experience.}
+    % \resumeItem{Cut data entry time for sales demos by 88\% by creating a feature for internal users to reset customer accounts to sample data.}
+  \resumeItemListEnd
+
+
+  \resumeSubheading{UBC Launchpad}{Jan 2025 -- Apr 2026}{Technical Lead}{Vancouver BC, Canada}
+  \resumeItemListStart
+    \resumeItem{Implemented \textbf{CI/CD pipelines in GitHub Actions} with automated rollouts, environment transitions, and secure config management, enabling zero-downtime deployments and reliable releases for full-stack \textbf{Dockerized} services.}
+    \resumeItem{Reduced photo load times by \textbf{80\%} by replacing inefficient JSON-encoded image payloads with \textbf{Express.js static file serving} and optimized asset delivery, significantly improving frontend responsiveness and overall user experience.}
+    \resumeItem{Designed and implemented a full-stack \textbf{Typescript} audit logging pipeline where user actions triggered backend event records persisted in \textbf{MySQL}, providing comprehensive traceability of 10+ critical admin operations and strengthening accountability.}
+  \resumeItemListEnd
+
+  \resumeSubheading{University of British Columbia}{Jan 2025 -- Apr 2025}{Teaching Assistant for CPEN 321: Software Engineering}{Vancouver BC, Canada}
+  \resumeItemListStart
+    \resumeItem{Mentored student teams on full-stack client-server projects which utilized \textbf{Android, Node.js, MySQL, and AWS services}, providing technical guidance on requirements, design, implementation, and deployment across 7 graded milestones.}
+    % \resumeItem{Evaluated project deliverables, assessing code quality, design, and testing to ensure sound software engineering practices.}
+  \resumeItemListEnd
+  \resumeSubSubheading
+  {Teaching Assistant for CPEN 331: Introduction to Operating Systems}{Sept 2024 -- Dec 2024}
+  \resumeItemListStart
+    \resumeItem{Delivered hands-on debugging support and detailed \textbf{C} code reviews, enabling students to resolve complex kernel issues and strengthen their understanding of syscalls, virtual memory, and process management in a teaching operating system kernel.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading{\textbf{RL Framework for AV1 Encoder Control} | \textbf{NetInt Technologies}}{C, C++, Python, Pybind11, OpenAI Gymnasium, SVT-AV1}{2025}
+    \resumeItemListStart
+    \resumeItem{Redesigned \textbf{SVT-AV1’s} rate control using reinforcement learning, enabling dynamic superblock-level rate control adjustments and achieving up to 15\% BD-Rate savings, delivering the same visual quality at significantly lower bitrates.}
+    \resumeItem{Built a speed-optimized \textbf{C to Python} callback interface using \textbf{Pybind11}, allowing the encoder to make real-time model inference requests to a Python-based RL agent with minimal overhead and full multithreading support.}
+    \resumeItem{Led policy architecture and episode threading, integrating \textbf{Stable-Baselines3} into a \textbf{OpenAI Gym-compatible} RL environment.}
+  \resumeItemListEnd
+
+  % \resumeProjectHeading{\textbf{Distributed Key-Value Store}}{Java}{2025}
+  % \resumeItemListStart
+  %   \resumeItem{Led design and implementation for a fault-tolerant distributed key-value store across 80+ nodes using consistent hashing and an epidemic membership protocol, achieving \textbf{0\% key loss} during stress tests with dynamic failures, rejoins, and network faults.}
+    % \resumeItem{Maintained strong sequential consistency and data durability with 4-way replication and automated re-replication on failure, validated across a multi-phase evaluation suite with peak load scaling to 2048 closed loop clients.}
+  % \resumeItemListEnd
+
+  % \resumeProjectHeading{\textbf{Playfair Cipher Breaker}}{Golang}{2024}
+  % \resumeItemListStart
+  %   \resumeItem{Cracked Playfair ciphertexts in under 10s on average, utilizing simulated annealing with n-gram fitness tests for efficiency.}
+  %   \resumeItem{Processed upwards of 15,000 ciphertexts per second on standard consumer hardware through careful optimization.}
+  %   \resumeItem{Achieved 95\% linguistic accuracy with English corpus segmentation and BK-tree validation, ensuring valid English output.}
+  % \resumeItemListEnd
+
+  % \resumeProjectHeading{\textbf{Tunematch}}{TypeScript, Express.js, MySQL, Java, Android}{2023}
+  % \resumeItemListStart
+  %   \resumeItem{Built and deployed a real-time Spotify queue sharing app supporting 20+ users with >60ms latency, using a custom synchronized WebSocket queue and a \textbf{TypeScript/Express backend} running \textbf{Dockerized in EC2} secured E2E with \textbf{Cloudflare SSL}.}
+    % \resumeItem{Architected and built a real-time Spotify queue collaboration app delivering seamless, synchronized audio streaming for up to 20 concurrent users with under 60ms latency, using a custom real time queue to maintain client synchronization over \textbf{WebSockets.}}
+    % \resumeItem{Deployed and secured the backend infrastructure using \textbf{Dockerized services on EC2}, with E2E encryption via \textbf{Cloudflare SSL.}}
+    % \resumeItem{Secured \textbf{1st place} out of 25+ projects and produced 60 pages of design, test, and performance documentation.}
+  % \resumeItemListEnd
+
+  % \resumeProjectHeading{\textbf{OS/161 Kernel Implementation}}{C, System/161, MIPS ASM}{2023}
+  % \resumeItemListStart
+  %   \resumeItem{Reduced crashes under high-memory loads by reclaiming up to 95\% of memory dynamically with under 5\% added overhead.}
+  %   \resumeItem{Supported over 32,000 concurrent processes by implementing process control syscalls, significantly enhancing system efficacy.}
+  %   \resumeItem{Enhanced system functionality and versatility through essential file syscalls, supporting robust file operations and I/O handling.}
+  % \resumeItemListEnd
+
+  % \resumeProjectHeading{\textbf{CPU Hardware Design}}{SystemVerilog, Quartus Prime, ModelSim, De1-SoC FPGA}{2022}
+  % \resumeItemListStart
+  %   \resumeItem{Engineered a custom lightweight 16-bit CPU in SystemVerilog with optimized fetch, decode, execute, and memory stages, delivering efficient and fully synthesizable performance on the DE1-SoC FPGA while ensuring reliable operation.}
+  %   \resumeItem{Validated operation through extensive simulation, achieving 100\% branch coverage and ensuring accurate execution and timing.}
+  % \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills \& Interests}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+  \textbf{Languages:} C\#, Typescript/Javascript, Golang,  Python, Java, C++, C, SystemVerilog, HTML/CSS \\
+  \textbf{Libraries/Frameworks:} Angular, React, Next.js, Prisma, Drizzle, .NET Core, Android, AvaloniaUI, Jest, Playwright \\
+  \textbf{Deployment:} Docker, Terraform, AWS, Azure, Traefik, Nginx, Github Action, Azure Devops Pipelines, DBMate \\
+  \textbf{Developer Tools:} Git, GitHub, Jira/BitBucket, Bash, ModelSim, Quartus Prime \\
+  \textbf{Interests:} Rock Climbing, Jazz/Soul Music, Vinyl Listening, Personal Style/Thrifting
+  }}
+\end{itemize}
+
+\end{document}
