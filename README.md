@@ -1,1 +1,1 @@
-![Resume](./resume.png)
+[![Resume](resume.png)](resume.pdf)

@@ -20,7 +20,7 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
-    pdfborder={0 0 1},
+    pdfborder={0 0 0},
     pdftitle={Theo Siemens-Rhodes Resume},
     pdfauthor={Theo Siemens-Rhodes},
     pdfsubject={Software Engineering Resume},
@@ -140,12 +140,15 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-  \resumeSubheading{SAP}{Jan 2026 -- Current}{Software Engineering Intern}{Vancouver BC, CA}
+  \resumeSubheading{\href{https://www.sap.com/products/technology-platform/cloud-analytics.html}{SAP}}{Jan 2026 -- Current}{Software Engineering Intern}{Vancouver BC, CA}
   \resumeItemListStart
-    \resumeItem{}
+    \resumeItem{Migrated \textbf{Redis} caching layer from Jedis to \textbf{Lettuce} drivers with optimized multi-key operations, achieving \textbf{46\% higher throughput} and \textbf{36\% lower latency}; validated across \textbf{AWS, Azure, GCP, and Alicloud} with integration tests.}
+    \resumeItem{Led development of \textbf{database observability} for \textbf{SAP HANA Cloud}, integrating metrics into \textbf{Dynatrace} dashboards; presented architecture at site-wide design review, closing a critical monitoring gap for \textbf{10+ microservices}.}
+    \resumeItem{Drove \textbf{Java 17 to 25} runtime upgrade for the internal microservice framework used by \textbf{50+ services}, coordinating cross-team design and product reviews; enabled adoption of modern language features ahead of EOL deadline.}
+    \resumeItem{Hardened service-to-service auth by implementing \textbf{JWT scope restrictions} to limit tokens to target services only, resolving a security vulnerability; added caller identification headers enabling \textbf{audit traceability} across microservice calls.}
   \resumeItemListEnd
 
-  \resumeSubheading{Hertzler Systems}{May 2023 -- Dec 2025}{Software Engineering Intern (Summers 2023, 2024, 2025, Fall 2025)}{Goshen IN, US}
+  \resumeSubheading{\href{https://www.hertzler.com}{Hertzler Systems}}{May 2023 -- Dec 2025}{Software Engineering Intern (Summers 2023, 2024, 2025, Fall 2025)}{Goshen IN, US}
   \resumeItemListStart
     \resumeItem{Accelerated bulk CSV imports by over \textbf{500x} by offloading parsing to \textbf{C\# .NET} backend task queue using MassTransit, removing per-row network bottlenecks and enabling fault-tolerant ingestion with support for partial retries.}
     \resumeItem{Implemented new \textbf{AngularJS} features, including audit dashboards and user license tracking; while also expanding support for user-defined scripting hooks, enabling greater customization and improving usability.}
@@ -155,23 +158,23 @@
   \resumeItemListEnd
 
 
-  \resumeSubheading{UBC Launchpad}{Jan 2025 -- Apr 2026}{Technical Lead}{Vancouver BC, Canada}
+  \resumeSubheading{\href{https://ubclaunchpad.com}{UBC Launchpad}}{Jan 2025 -- Apr 2026}{Technical Lead}{Vancouver BC, Canada}
   \resumeItemListStart
     \resumeItem{Implemented \textbf{CI/CD pipelines in GitHub Actions} with automated rollouts, environment transitions, and secure config management, enabling zero-downtime deployments and reliable releases for full-stack \textbf{Dockerized} services.}
     \resumeItem{Reduced photo load times by \textbf{80\%} by replacing inefficient JSON-encoded image payloads with \textbf{Express.js static file serving} and optimized asset delivery, significantly improving frontend responsiveness and overall user experience.}
     \resumeItem{Designed and implemented a full-stack \textbf{Typescript} audit logging pipeline where user actions triggered backend event records persisted in \textbf{MySQL}, providing comprehensive traceability of 10+ critical admin operations and strengthening accountability.}
   \resumeItemListEnd
 
-  \resumeSubheading{University of British Columbia}{Jan 2025 -- Apr 2025}{Teaching Assistant for CPEN 321: Software Engineering}{Vancouver BC, Canada}
-  \resumeItemListStart
-    \resumeItem{Mentored student teams on full-stack client-server projects which utilized \textbf{Android, Node.js, MySQL, and AWS services}, providing technical guidance on requirements, design, implementation, and deployment across 7 graded milestones.}
-    % \resumeItem{Evaluated project deliverables, assessing code quality, design, and testing to ensure sound software engineering practices.}
-  \resumeItemListEnd
-  \resumeSubSubheading
-  {Teaching Assistant for CPEN 331: Introduction to Operating Systems}{Sept 2024 -- Dec 2024}
-  \resumeItemListStart
-    \resumeItem{Delivered hands-on debugging support and detailed \textbf{C} code reviews, enabling students to resolve complex kernel issues and strengthen their understanding of syscalls, virtual memory, and process management in a teaching operating system kernel.}
-  \resumeItemListEnd
+  % \resumeSubheading{\href{https://ece.ubc.ca}{University of British Columbia}}{Jan 2025 -- Apr 2025}{Teaching Assistant for CPEN 321: Software Engineering}{Vancouver BC, Canada}
+  % \resumeItemListStart
+  %   \resumeItem{Mentored student teams on full-stack client-server projects which utilized \textbf{Android, Node.js, MySQL, and AWS services}, providing technical guidance on requirements, design, implementation, and deployment across 7 graded milestones.}
+  %   % \resumeItem{Evaluated project deliverables, assessing code quality, design, and testing to ensure sound software engineering practices.}
+  % \resumeItemListEnd
+  % \resumeSubSubheading
+  % {Teaching Assistant for CPEN 331: Introduction to Operating Systems}{Sept 2024 -- Dec 2024}
+  % \resumeItemListStart
+  %   \resumeItem{Delivered hands-on debugging support and detailed \textbf{C} code reviews, enabling students to resolve complex kernel issues and strengthen their understanding of syscalls, virtual memory, and process management in a teaching operating system kernel.}
+  % \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
@@ -226,10 +229,11 @@
 \section{Skills \& Interests}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-  \textbf{Languages:} C\#, Typescript/Javascript, Golang,  Python, Java, C++, C, SystemVerilog, HTML/CSS \\
-  \textbf{Libraries/Frameworks:} Angular, React, Next.js, Prisma, Drizzle, .NET Core, Android, AvaloniaUI, Jest, Playwright \\
-  \textbf{Deployment:} Docker, Terraform, AWS, Azure, Traefik, Nginx, Github Action, Azure Devops Pipelines, DBMate \\
-  \textbf{Developer Tools:} Git, GitHub, Jira/BitBucket, Bash, ModelSim, Quartus Prime \\
+  \textbf{Languages:} Java, C\#, Typescript/Javascript, Golang, Python, C++, C, SystemVerilog, HTML/CSS \\
+  \textbf{Libraries/Frameworks:} Spring Boot, Angular, React, Next.js, Prisma, Drizzle, .NET Core, Locust, JMeter, Jest, Playwright \\
+  \textbf{Data/Infrastructure:} Redis, PostgreSQL, SAP HANA Cloud, Solace, Dynatrace, Prometheus, Grafana Loki \\
+  \textbf{Deployment:} SAP BTP, AWS, Docker, Kubernetes, Cloud Foundry, Terraform, Traefik, Nginx, Github Actions \\
+  \textbf{Developer Tools:} Git, GitHub, Jira, Maven, JUnit, Bash, ModelSim, Quartus Prime \\
   \textbf{Interests:} Rock Climbing, Jazz/Soul Music, Vinyl Listening, Personal Style/Thrifting
   }}
 \end{itemize}
