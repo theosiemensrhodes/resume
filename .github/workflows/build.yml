@@ -1,4 +1,4 @@
-name: Build LaTeX Documents
+name: Build Resume
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Compile Resume
         uses: xu-cheng/latex-action@v3
@@ -39,15 +39,7 @@ jobs:
             mv resume-1.png resume.png
           fi
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume-files
-          path: |
-            resume.pdf
-            resume.png
-
-      - name: Commit files (on push to main)
+      - name: Commit files
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
