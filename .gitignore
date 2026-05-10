@@ -1,0 +1,24 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Editor files
+*.swp
+*~
+.DS_Store
+
+# Vim
+*.swo
+Session.vim
+
+# VS Code
+.vscode/

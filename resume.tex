@@ -1,7 +1,15 @@
+% !TEX program = xelatex
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{fontspec}
-\setmainfont{Tinos}
+\setmainfont{Tinos}[
+  Path = ./fonts/Tinos/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -56,6 +64,7 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\setlength{\footskip}{12pt}
 
 % Sections formatting
 \titleformat{\section}{
@@ -111,7 +120,7 @@
 
 %----------HEADING----------
 \begin{center}
-    \MakeUppercase{\textbf{\Huge \scshape Theo Siemens-Rhodes}} \\ \vspace{5pt}
+    \MakeUppercase{\textbf{\Huge Theo Siemens-Rhodes}} \\ \vspace{5pt}
     \small +1 (778) 325-8153 | \href{mailto:theo.siemensrhodes@gmail.com}{theo.siemensrhodes@gmail.com} | 
     \href{https://linkedin.com/in/theo-siemens-rhodes}{linkedin.com/in/theo-siemens-rhodes} |
     \href{https://github.com/theosiemensrhodes}{github.com/theosiemensrhodes}

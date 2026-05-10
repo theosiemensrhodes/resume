@@ -1,0 +1,57 @@
+name: Build LaTeX Documents
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.tex'
+      - '**.sty'
+      - 'fonts/**/*'
+      - '.github/workflows/build.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile Resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          latexmk_use_xelatex: true
+          extra_fonts: ./fonts/**/*.ttf
+
+      - name: Convert PDF to PNG
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils imagemagick
+          # Update ImageMagick policy to allow PDF conversion
+          sudo sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
+          # Convert PDF to high-quality PNG (each page becomes resume-0.png, resume-1.png, etc.)
+          pdftoppm -png -r 200 resume.pdf resume
+          # Rename single page output
+          if [ -f resume-1.png ]; then
+            mv resume-1.png resume.png
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-files
+          path: |
+            resume.pdf
+            resume.png
+
+      - name: Commit files (on push to main)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add resume.pdf resume.png
+          git diff --staged --quiet || git commit -m "Build resume [skip ci]"
+          git push
